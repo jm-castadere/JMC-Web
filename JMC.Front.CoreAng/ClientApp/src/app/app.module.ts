@@ -14,6 +14,11 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ApiAuthorizationModule } from '../api-authorization/api-authorization.module';
 import { AuthorizeGuard } from '../api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from "../api-authorization/authorize.interceptor";
+import { TechnicComponent } from './technic/technic.component';
+import { ProjectComponent } from './project/project.component';
+import { CompetenceComponent } from './competence/competence.component';
+import { DetailProjectComponent } from './project/detail-project/detail-project.component';
+import { NotfoundComponent } from './shared/notfound/notfound.component';
 
 @
   NgModule({
@@ -22,7 +27,12 @@ import { AuthorizeInterceptor } from "../api-authorization/authorize.interceptor
       NavMenuComponent,
       HomeComponent,
       CounterComponent,
-      FetchDataComponent
+      FetchDataComponent,
+      TechnicComponent,
+      ProjectComponent,
+      CompetenceComponent,
+      DetailProjectComponent,
+      NotfoundComponent
     ],
 
     imports: [
@@ -31,17 +41,12 @@ import { AuthorizeInterceptor } from "../api-authorization/authorize.interceptor
       FormsModule,
       AppRoutingModule,
       ApiAuthorizationModule
-
-      //RouterModule.forRoot([
-      //  { path: '', component: HomeComponent, pathMatch: 'full' },
-      //  { path: 'counter', component: CounterComponent },
-      //  { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
-      //])
     ],
     exports: [
       ApiAuthorizationModule
     ],
     providers: [
+      //to set if usser authorized
       { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
     ],
 

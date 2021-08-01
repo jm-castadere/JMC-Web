@@ -54,16 +54,11 @@
 
   <ItemGroup>
     <None Remove="appsettings.json~RF1f5e46.TMP" />
-    <None Remove="ClientApp\src\models\Person.ts" />
+    <None Remove="ClientApp\src\app\models\Person.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\shared\" />
     <Folder Include="ClientApp\src\services\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\models\person.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

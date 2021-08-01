@@ -1,0 +1,19 @@
+<p>Project List</p>
+
+{{valparam}}
+<br/>
+{{listPerso | json}}
+
+<div *ngFor="let person of listPerso">
+  <div class="row">
+    <div class="col-6">
+      <app-detail-project [valpardetail]="person"></app-detail-project>
+    </div>
+    <div class="col-6">
+      <app-detail-project [valpardetail]="person"></app-detail-project>
+    </div>
+
+  </div>
+</div>
+
+

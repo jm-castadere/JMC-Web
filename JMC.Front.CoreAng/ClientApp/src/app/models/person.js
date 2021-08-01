@@ -1,13 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Person = void 0;
 var Person = /** @class */ (function () {
     function Person(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
     }
-    Person.prototype.getFullName = function () {
-        return this.firstName + " " + this.lastName;
-    };
     return Person;
 }());
-var person = new Person('John', 'Doe', 44);
+exports.Person = Person;
+var person = new Person('Isabel', 'Castadere', 60);
 //# sourceMappingURL=person.js.map
